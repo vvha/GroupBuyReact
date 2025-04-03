@@ -1,8 +1,10 @@
-:root{
-    --font-dark: #383838;
-    --font-purple: #5555AC;
-    --font-white: #fff;
-    --bg-purple: #5555AC;
-    --bg-purple-light: #7777bd;
-    --bg-white: #fff;
+:root {
+  --font-dark: #383838;
+  --font-purple: #5555AC;
+  --font-white: #fff;
+  --bg-purple: #5555AC;
+  --bg-purple-light: #7777bd;
+  --bg-white: #fff;
 }
+
+/*# sourceMappingURL=variables.css.map */

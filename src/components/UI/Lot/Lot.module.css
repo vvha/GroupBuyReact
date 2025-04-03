@@ -1,0 +1,64 @@
+.lot_container {
+  position: relative;
+  display: block;
+  width: 320px;
+  height: 420px;
+  padding: 5px 25px 20px;
+  border: 1px solid var(--bg-purple);
+  border-radius: 24px;
+  background-color: var(--lot-bg);
+  font-family: "Inter", sans-serif;
+}
+.lot_container .time {
+  color: var(--font-purple);
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+}
+.lot_container .img_container {
+  margin-top: 16px;
+  border: 1px solid purple;
+  min-height: 170px;
+}
+.lot_container .title {
+  margin-top: 16px;
+  color: var(--font-dark);
+  font-weight: 600;
+  font-size: 18px;
+  text-align: start;
+}
+.lot_container .footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.lot_container .footer .price {
+  font-weight: 600;
+}
+.lot_container .join_btn {
+  position: absolute;
+  bottom: 25px;
+  width: 85%;
+  height: 40px;
+  color: var(--font-white);
+  background: var(--bg-purple);
+  border: none;
+  border-radius: 24px;
+  padding: 9px 16px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.1s ease;
+}
+.lot_container .join_btn:hover {
+  background: var(--bg-purple-light);
+}
+.lot_container .join_btn:active {
+  transform: scale(0.95);
+}
+
+/*# sourceMappingURL=Lot.module.css.map */

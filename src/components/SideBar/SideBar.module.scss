@@ -1,0 +1,94 @@
+
+.sidebar{
+  position: absolute;
+  margin-top: 50px;
+  border:1px solid var(--bg-purple);
+  border-radius: 24px;
+  width: 70px;
+  height: 775px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+
+  .list {
+
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 35px 0;
+    margin: 0 auto;
+    justify-content: space-between;
+
+
+    li {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--font-dark);
+
+      &>a {
+        border-radius: 10px;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.1s ease;
+      }
+
+      &:first-child {
+        margin-bottom: 70px;
+      }
+
+      &:last-child {
+        margin-top: 300px;
+      }
+
+      &:hover > a {
+        //background: var(--bg-white);
+        border: 2px solid var(--bg-purple);
+
+
+        svg {
+          fill: var(--bg-purple);
+        }
+      }
+
+      &:hover > .description {
+        opacity: 1;
+        transform: translate(10%, -100%); // Финальное положение
+      }
+    }
+  }
+  .description {
+    z-index: 100; // Увеличиваем, чтобы был над другими элементами
+    position: absolute;
+    left: 120%; // Появляется справа от родителя
+    top: 50%;
+    transform: translate(20%, -100%); // Начальное положение (сдвинуто вправо)
+    opacity: 0;
+    padding: 5px 15px;
+    background-color: var(--bg-white);
+    border: 2px solid var(--bg-purple-transparent);
+    border-radius: 10px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    white-space: nowrap; // Текст в одну строку
+    min-width: max-content; // Ширина по содержимому
+    margin-left: 10px; // Отступ от иконки
+  }
+
+}
+
+@keyframes slideIn {
+  from {
+    right: 0;
+    opacity: 0;
+  }
+
+  to {
+    right: -140px;
+    opacity: 1;
+  }
+}

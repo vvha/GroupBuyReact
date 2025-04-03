@@ -1,0 +1,20 @@
+.progress_bar {
+  width: 100%;
+  height: 15px;
+  border: 2px solid var(--warm-secondary);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.progress_bar .progress {
+  position: relative;
+  left: 1px;
+  height: calc(100% - 2px);
+  background-color: var(--warm-secondary);
+  border-radius: 10px 0 0 10px;
+  transition: width 0.3s ease-in-out;
+}
+
+/*# sourceMappingURL=ProgressBar.module.css.map */

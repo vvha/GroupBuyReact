@@ -1,0 +1,81 @@
+.sidebar {
+  position: absolute;
+  margin-top: 50px;
+  border: 1px solid var(--bg-purple);
+  border-radius: 24px;
+  width: 70px;
+  height: 775px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+}
+.sidebar .list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 35px 0;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.sidebar .list li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--font-dark);
+}
+.sidebar .list li > a {
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.1s ease;
+}
+.sidebar .list li:first-child {
+  margin-bottom: 70px;
+}
+.sidebar .list li:last-child {
+  margin-top: 300px;
+}
+.sidebar .list li:hover > a {
+  border: 2px solid var(--bg-purple);
+}
+.sidebar .list li:hover > a svg {
+  fill: var(--bg-purple);
+}
+.sidebar .list li:hover > .description {
+  opacity: 1;
+  transform: translate(10%, -100%);
+}
+.sidebar .description {
+  z-index: 100;
+  position: absolute;
+  left: 120%;
+  top: 50%;
+  transform: translate(20%, -100%);
+  opacity: 0;
+  padding: 5px 15px;
+  background-color: var(--bg-white);
+  border: 2px solid var(--bg-purple-transparent);
+  border-radius: 10px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  min-width: max-content;
+  margin-left: 10px;
+}
+
+@keyframes slideIn {
+  from {
+    right: 0;
+    opacity: 0;
+  }
+  to {
+    right: -140px;
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=SideBar.module.css.map */
