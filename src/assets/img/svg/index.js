@@ -10,8 +10,10 @@ import {ReactComponent as MessagesIco} from "src/assets/img/svg/messages.svg";
 import {ReactComponent as InstagramIco} from "src/assets/img/svg/instagram.svg";
 import {ReactComponent as TelegramIco} from "src/assets/img/svg/telegram.svg";
 import {ReactComponent as WhatsappIco} from "src/assets/img/svg/whatsapp.svg";
-
+import {ReactComponent as PlusIco} from "src/assets/img/svg/plus.svg";
+import {ReactComponent as EyeIco} from "src/assets/img/svg/eye.svg";
 
 export {FavoritesIco, GroupIco, StoreIco, FAQIco,
     HomeIco, LogoIco, SearchIco, NotificationsIco,
-    MessagesIco, TelegramIco, InstagramIco, WhatsappIco};
+    MessagesIco, TelegramIco, InstagramIco, WhatsappIco,
+    EyeIco, PlusIco};

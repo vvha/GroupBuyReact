@@ -1,7 +1,9 @@
 .sidebar {
-  position: absolute;
+  z-index: 999;
+  position: fixed;
   margin-top: 50px;
   border: 1px solid var(--bg-purple);
+  backdrop-filter: blur(20px) brightness(1);
   border-radius: 24px;
   width: 70px;
   height: 775px;

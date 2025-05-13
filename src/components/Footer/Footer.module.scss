@@ -1,9 +1,11 @@
 footer{
+  max-width:100%;
   position: absolute;
   left:0;
   bottom: -350px;
   height: 350px;
   width: 100%;
+  margin: 0 auto;
   padding: 0 100px;
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -15,6 +17,7 @@ footer{
   background-color: var(--font-white);
 
   .links {
+    margin: 0 100px 0 10px;
     flex:1;
     list-style-type: none;
     max-width: 320px;

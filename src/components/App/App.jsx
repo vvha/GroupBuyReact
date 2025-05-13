@@ -1,4 +1,3 @@
-import { Routes, Route, Link } from 'react-router-dom';
 import HeaderComponent from "../Header/HeaderComponent";
 import SideBarComponent from "../SideBar/SideBarComponent";
 import FooterComponent from "../Footer/FooterComponent";
@@ -8,10 +7,10 @@ import AppRoutes from "../Routes";
 function App() {
   return (
       <div className={classes.app_container}>
-        <HeaderComponent/>
-        <SideBarComponent/>
+        {window.location.pathname !== "/login" && window.location.pathname !== "/register" && <HeaderComponent/>}
+        {window.location.pathname !== "/login" && window.location.pathname !== "/register" && <SideBarComponent/>}
         <AppRoutes/>
-        <FooterComponent/>
+        {window.location.pathname !== "/login" && window.location.pathname !== "/register" && <FooterComponent/>}
       </div>
   );
 }

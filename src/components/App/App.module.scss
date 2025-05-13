@@ -5,12 +5,12 @@
 }
 
 body{
-  margin: 0;
+  max-width: 1920px;
+  margin: 0 auto;
   padding: 0;
   position: relative;
-  background: url("../../assets/img/png/background_first.png") no-repeat left top,
-                    url("../../assets/img/png/background_repeat.png") repeat-y left 1200px;
-  background-size: 100% auto, 100% auto;
+  background: url("../../assets/img/png/background_repeat.png") repeat-y left 1200px;
+  background-size: 100%;
 }
 
 svg {
@@ -26,5 +26,7 @@ a {
 }
 
 .app_container {
-  padding: 20px 70px;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 70px 20px;
 }
