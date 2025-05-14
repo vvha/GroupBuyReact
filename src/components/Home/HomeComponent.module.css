@@ -164,7 +164,7 @@
   transform: scale(1.05);
 }
 .benefits_container .benefits_wrapper .benefit:hover {
-  z-index: 100;
+  z-index: 50;
   transform: scale(1.1);
   box-shadow: 0 0 7px var(--bg-purple-light);
 }

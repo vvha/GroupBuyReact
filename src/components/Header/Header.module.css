@@ -3,12 +3,14 @@
 }
 
 .header {
+  width: 80%;
+  margin: 0 auto;
   padding: 10px 15px;
   position: sticky;
-  top: 0;
-  z-index: 10;
-  border-radius: 0 0 24px 24px;
-  backdrop-filter: blur(3px) brightness(1.01);
+  top: 10px;
+  z-index: 100;
+  border-radius: 24px;
+  background-color: var(--bg-white);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 

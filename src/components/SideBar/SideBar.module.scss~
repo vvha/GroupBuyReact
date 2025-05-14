@@ -7,8 +7,8 @@
 }
 
 .wrapper {
-  background-color: #ffffff;
-  border-radius: 24px;
+  background-color: #ffffff; // чисто-белый фон
+  border-radius: 24px;       // мягкие закругления
   width: 64px;
   height: 400px;
   padding: 20px 0;
@@ -16,8 +16,13 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05), 0 12px 28px rgba(0, 0, 0, 0.08);
+
+  // 💡 ВЫДЕЛЕНИЕ:
+
+  border: 1px solid rgba(0, 0, 0, 0.06); // тонкая граница
+  box-shadow:
+          0 4px 12px rgba(0, 0, 0, 0.05),
+          0 12px 28px rgba(0, 0, 0, 0.08);     // мягкая тень
 }
 
 .top, .bottom {
@@ -37,18 +42,19 @@
   justify-content: center;
   border-radius: 10px;
   transition: color 0.3s ease;
-}
-.icon svg {
-  width: 22px;
-  height: 22px;
-  fill: currentColor;
-  transition: fill 0.3s ease;
-}
-.icon:hover {
-  color: #5e50fa;
-}
-.icon:active {
-  color: #5e50fa;
-}
 
-/*# sourceMappingURL=SideBar.module.css.map */
+  svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+    transition: fill 0.3s ease;
+  }
+
+  &:hover {
+    color: #5e50fa;
+  }
+
+  &active {
+    color: #5e50fa;
+  }
+}
