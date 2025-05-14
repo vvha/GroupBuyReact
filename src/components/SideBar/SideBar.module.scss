@@ -1,96 +1,60 @@
-
-.sidebar{
-  z-index: 999;
+.sidebar {
   position: fixed;
-  margin-top: 50px;
-  border:1px solid var(--bg-purple);
-  backdrop-filter: blur(20px) brightness(1);
-  border-radius: 24px;
-  width: 70px;
-  height: 775px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-
-  .list {
-
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
-    padding: 35px 0;
-    margin: 0 auto;
-    justify-content: space-between;
-
-
-    li {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: var(--font-dark);
-
-      &>a {
-        border-radius: 10px;
-        width: 50px;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: 0.1s ease;
-      }
-
-      &:first-child {
-        margin-bottom: 70px;
-      }
-
-      &:last-child {
-        margin-top: 300px;
-      }
-
-      &:hover > a {
-        //background: var(--bg-white);
-        border: 2px solid var(--bg-purple);
-
-
-        svg {
-          fill: var(--bg-purple);
-        }
-      }
-
-      &:hover > .description {
-        opacity: 1;
-        transform: translate(10%, -100%); // Финальное положение
-      }
-    }
-  }
-  .description {
-    z-index: 100; // Увеличиваем, чтобы был над другими элементами
-    position: absolute;
-    left: 120%; // Появляется справа от родителя
-    top: 50%;
-    transform: translate(20%, -100%); // Начальное положение (сдвинуто вправо)
-    opacity: 0;
-    padding: 5px 15px;
-    background-color: var(--bg-white);
-    border: 2px solid var(--bg-purple-transparent);
-    border-radius: 10px;
-    pointer-events: none;
-    transition: all 0.3s ease;
-    white-space: nowrap; // Текст в одну строку
-    min-width: max-content; // Ширина по содержимому
-    margin-left: 10px; // Отступ от иконки
-  }
-
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  z-index: 100;
 }
 
-@keyframes slideIn {
-  from {
-    right: 0;
-    opacity: 0;
+.wrapper {
+  background-color: #ffffff; // чисто-белый фон
+  border-radius: 24px;       // мягкие закругления
+  width: 64px;
+  height: 400px;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  // 💡 ВЫДЕЛЕНИЕ:
+
+  border: 1px solid rgba(0, 0, 0, 0.06); // тонкая граница
+  box-shadow:
+          0 4px 12px rgba(0, 0, 0, 0.05),
+          0 12px 28px rgba(0, 0, 0, 0.08);     // мягкая тень
+}
+
+.top, .bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.icon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  color: #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  transition: color 0.3s ease;
+
+  svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+    transition: fill 0.3s ease;
   }
 
-  to {
-    right: -140px;
-    opacity: 1;
+  &:hover {
+    color: #5e50fa;
+  }
+
+  &.active {
+    color: #5e50fa;
   }
 }

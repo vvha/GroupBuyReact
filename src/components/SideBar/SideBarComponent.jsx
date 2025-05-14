@@ -1,34 +1,60 @@
 import React from 'react';
-import {Link} from "react-router-dom";
-import classes from "./SideBar.module.scss";
-import {FavoritesIco, GroupIco, StoreIco, FAQIco, HomeIco} from "../../assets/img/svg";
+import { NavLink } from 'react-router-dom';
+import classes from './SideBar.module.scss';
+
+import {
+    HomeIco,
+    StoreIco,
+    GroupIco,
+    FAQIco,
+    FavoritesIco
+} from '../../assets/img/svg';
+
+const navTop = [
+    { to: '/', icon: <HomeIco />, name: 'Home' },
+    { to: '/store', icon: <StoreIco />, name: 'Store' },
+    { to: '/community', icon: <GroupIco />, name: 'Community' },
+    { to: '/faq', icon: <FAQIco />, name: 'FAQ' },
+];
+
+const navBottom = [
+    { to: '/favorites', icon: <FavoritesIco />, name: 'Favorites' },
+];
 
 const SideBarComponent = () => {
     return (
-        <nav className={classes.sidebar}>
-            <ul className={classes.list}>
-                <li>
-                    <Link><HomeIco/></Link>
-                    <p className={classes.description}>Главная</p>
-                </li>
-                <li>
-                    <Link><StoreIco/></Link>
-                    <p className={classes.description}>Каталог</p>
-                </li>
-                <li>
-                    <Link><GroupIco/></Link>
-                    <p className={classes.description}>Сообщество</p>
-                </li>
-                <li>
-                    <Link><FAQIco/></Link>
-                    <p className={classes.description}>FAQ</p>
-                </li>
-                <li>
-                    <Link><FavoritesIco/></Link>
-                    <p className={classes.description}>Избранное</p>
-                </li>
-            </ul>
-        </nav>
+        <div className={classes.sidebar}>
+            <div className={classes.wrapper}>
+                <div className={classes.top}>
+                    {navTop.map(({ to, icon, name }) => (
+                        <NavLink
+                            key={name}
+                            to={to}
+                            className={({ isActive }) =>
+                                isActive ? `${classes.icon} ${classes.active}` : classes.icon
+                            }
+                        >
+                            <span className={classes.marker}></span>
+                            {icon}
+                        </NavLink>
+                    ))}
+                </div>
+                <div className={classes.bottom}>
+                    {navBottom.map(({ to, icon, name }) => (
+                        <NavLink
+                            key={name}
+                            to={to}
+                            className={({ isActive }) =>
+                                isActive ? `${classes.icon} ${classes.active}` : classes.icon
+                            }
+                        >
+                            <span className={classes.marker}></span>
+                            {icon}
+                        </NavLink>
+                    ))}
+                </div>
+            </div>
+        </div>
     );
 };
 
